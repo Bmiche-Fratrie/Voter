@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Redirection vers l'onglet de vote</title>
+    <script>
+        window.onload = function() {
+            // Rediriger vers la page principale
+            window.location.href = "https://www.les-friteries.com/site/la-fratrie";
+
+            // Attendre que la page se charge, puis simuler un clic sur l'onglet de vote
+            setTimeout(function() {
+                // Remplacer '#id-de-longlet' par l'identifiant réel de l'onglet de vote
+                const voteTab = document.querySelector("a[href='#id-de-longlet']");
+                if (voteTab) {
+                    voteTab.click();
+                }
+
+                // Interaction avec le champ d'entrée d'évaluation
+                const ratingInput = document.getElementById("input-id");
+                if (ratingInput) {
+                    ratingInput.value = 4.5; // Exemple : définir la valeur de l'évaluation à 4.5
+                }
+            }, 1000); // Ajuster le délai si nécessaire
+        };
+    </script>
+</head>
+<body>
+    <p>Redirection en cours...</p>
+</body>
+</html>
